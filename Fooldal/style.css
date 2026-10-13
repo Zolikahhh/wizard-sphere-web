@@ -1,0 +1,140 @@
+body{
+    background-image: url(background.jpeg);
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow-x: hidden; 
+}
+
+h2{
+    font-weight: normal;
+}
+
+#agostoncontainer{
+    display: flex;
+    align-items: center;    
+    justify-content: center; 
+    height: 100vh;
+    width: 100vw;
+}
+
+#agoston-content {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    margin-top: -100px; 
+    max-width: 800px; 
+    padding: 0 20px;
+    isolation: isolate;
+}
+
+#agoston{
+    width: 500px; 
+    height: auto;
+    mix-blend-mode: screen;
+    -webkit-mask-image: radial-gradient(ellipse 63% 55% at 50% 45%, black 25%, transparent 85%);
+            mask-image: radial-gradient(ellipse 63% 55% at 50% 45%, black 25%, transparent 85%);
+    
+}
+
+#welcome{
+    color: wheat;
+    font-size: 44px;
+    text-align: center; 
+    margin-top: 20px; 
+    width: 100%;
+    
+    text-shadow: 
+        -1px -1px 0 #000
+}
+
+.orbit-container {
+        position: fixed; 
+        top:44%; 
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1000;
+        width: 300px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: none;
+        text-decoration: none;
+    }
+    .orbit-container::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: 2px dashed #4a5568;
+        border-radius: 50%;
+        box-sizing: border-box;
+    }
+    
+    @keyframes orbit {
+        0% {
+            transform: rotate(0deg) translateX(150px) rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg) translateX(150px) rotate(-360deg);
+        }
+    }
+
+    .orbit-link {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            animation: orbit 10s linear infinite;
+            transition: transform 0.3s ease;
+            
+        }
+
+    .orbit-button {
+        width: 100%;
+            height: 100%; 
+            background-color: transparent;
+            color: white;
+            border-radius: 50%;
+            border: none;
+            font-size: 40px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: none;
+            transition: border-color 0.3s ease, color 0.3s ease;
+    }
+    
+    .orbit-container:hover .orbit-link,
+        .orbit-container:hover::before {
+            animation-play-state: paused;
+    }
+
+    .orbit-button:hover {
+        transform: scale(1.2);
+        font-size: 60px;
+    }
+    
+    .link-1 {
+        animation-delay: 0s;
+    }
+    
+    .link-2 {
+        animation-delay: -2.5s;
+    }
+    
+    .link-3 {
+        animation-delay: -5s;
+    }
+    
+    .link-4 {
+        animation-delay: -7.5s;
+    }

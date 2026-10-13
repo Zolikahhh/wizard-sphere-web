@@ -1,0 +1,91 @@
+body{
+    background-image: url(background.jpg);
+    background-size: cover;
+}
+
+#backbutton{
+    position: fixed;
+    font-size: 30px;
+    left: 1%;
+    top: 2%;
+    text-decoration: none;
+}
+
+.openscroll{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.openscroll img{
+    width: 500px;
+    height: 150px;
+}
+
+#openscroll-container{
+    position: fixed;
+    left: 10%;
+}
+
+.openscrolltext{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 20px;
+    color: black;
+    transform: translate(-50%,-50%);
+    font-family: 'Uncial Antiqua';
+    font-weight: bold;
+}
+
+.fullscroll{
+    position: relative;
+    display: inline-block;
+}
+
+#fullscroll-container{
+    position: fixed;
+    left: 24%;
+    top: 15%;
+    display: none; /* Hidden by default */
+}
+
+#fullscroll-container.is-visible {
+    display: block; /* Shown when class is added */
+    animation: fadeContainer 0.5s;
+}
+
+#fullscroll-container img{
+    height: 800px;
+    width: 1000px;
+}
+
+.fullscrolltext{
+    display: none;
+    letter-spacing: 1px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 20px;
+    color: black;
+    transform: translate(-50%,-50%);
+    font-family: 'Uncial Antiqua';
+    font-weight: bold;
+    width: 60%;
+    text-align: center;
+}
+
+.fullscrolltext.is-visible {
+    display: block;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeContainer {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

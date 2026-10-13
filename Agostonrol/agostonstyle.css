@@ -1,0 +1,90 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#backbutton{
+    position: fixed;
+    font-size: 30px;
+    left: 1%;
+    top: 2%;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    padding: 20px; 
+    background-color: #0f2513; 
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #2E4230;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Subtle shadow */
+    border-radius: 25px;
+}
+
+/* --- 1. The Split Row (30/70) --- */
+.split-row {
+    display: flex;
+    gap: 30px; /* Space between image and text */
+    margin-bottom: 30px;
+    align-items: flex-start; /* Aligns text to top of image */
+}
+
+.left-col {
+    /* Exact 30% width */
+    flex: 0 0 30%;
+    max-width: 30%;
+}
+
+.left-col img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px; /* Optional rounded corners */
+}
+
+.right-col {
+    /* Remaining space (approx 70%) */
+    flex: 1;
+}
+
+/* --- 2. Full Width Text --- */
+.full-width-text {
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: justify; /* Optional: makes the block of text look neat */
+    padding: 20px;
+    background-color: #7a7a7a;
+    border-radius: 10px;
+}
+
+/* --- 3. Centered Button --- */
+.button-container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+}
+
+.action-btn {
+    padding: 15px 40px;
+    font-size: 18px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.action-btn:hover {
+    background-color: #555;
+}
